@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F0A9386D-DE94-48E7-8447-BBC7682F3771}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RDH2.Utilities</RootNamespace>
+    <AssemblyName>RDH2.Utilities</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\ConfigHelper.cs" />
+    <Compile Include="Configuration\ConfigurationGroupAttribute.cs" />
+    <Compile Include="Configuration\ConfigurationSectionAttribute.cs" />
+    <Compile Include="Controls\EditableListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\NumericTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FileDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FilterTypeSet.cs" />
+    <Compile Include="Dialogs\OpenFileDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PrintDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SaveFileDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Format\TimeSpanFormatter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Win32\ControlID.cs" />
+    <Compile Include="Win32\Global.cs" />
+    <Compile Include="Win32\NMHDR.cs" />
+    <Compile Include="Win32\OPENFILENAME.cs" />
+    <Compile Include="Win32\POINT.cs" />
+    <Compile Include="Win32\PRINTDLG.cs" />
+    <Compile Include="Win32\RECT.cs" />
+    <Compile Include="Win32\WndHelper.cs" />
+    <Compile Include="Win32\WndMsg.cs" />
+    <Compile Include="Win32\WndPos.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

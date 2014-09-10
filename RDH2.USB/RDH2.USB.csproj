@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D62B6362-F14E-497E-B473-99818F9FF830}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RDH2.USB</RootNamespace>
+    <AssemblyName>RDH2.USB</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DeviceEnumerator.cs" />
+    <Compile Include="Enums\CreationDisposition.cs" />
+    <Compile Include="Enums\DeviceGuid.cs" />
+    <Compile Include="Enums\DevInterfaceData.cs" />
+    <Compile Include="Enums\FileAccess.cs" />
+    <Compile Include="Enums\FileAttributes.cs" />
+    <Compile Include="Enums\FileShare.cs" />
+    <Compile Include="Enums\GetClassDevs.cs" />
+    <Compile Include="Enums\UsbdPipeType.cs" />
+    <Compile Include="Enums\UsbPipeDirection.cs" />
+    <Compile Include="PInvoke\Kernel32.cs" />
+    <Compile Include="PInvoke\SetupAPI.cs" />
+    <Compile Include="PInvoke\WinUSB.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Structs\SP_DEVICE_INTERFACE_DATA.cs" />
+    <Compile Include="Structs\SP_DEVICE_INTERFACE_DETAIL_DATA.cs" />
+    <Compile Include="Structs\SP_DEVINFO_DATA.cs" />
+    <Compile Include="Structs\USB_INTERFACE_DESCRIPTOR.cs" />
+    <Compile Include="Structs\WINUSB_PIPE_INFORMATION.cs" />
+    <Compile Include="Structs\WINUSB_SETUP_PACKET.cs" />
+    <Compile Include="UsbInterface.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

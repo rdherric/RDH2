@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="RDH2.Windows.Controls.UpDown2D"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:RW="clr-namespace:RDH2.Windows.Markup"
+             xmlns:RWC="clr-namespace:RDH2.Windows.Controls">
+    <StackPanel Orientation="Horizontal">
+        <RepeatButton x:Name="left" x:FieldModifier="internal" Height="20" Width="20" Click="LeftButtonClick">
+            <Image Source="pack://application:,,,/RDH2.Windows;component/Resources/Icons/LeftArrow.png" />
+        </RepeatButton>
+        <StackPanel Orientation="Vertical">
+            <RepeatButton x:Name="up" x:FieldModifier="internal" Height="20" Width="20" Click="UpButtonClick">
+                <Image Source="pack://application:,,,/RDH2.Windows;component/Resources/Icons/UpArrow.png" />
+            </RepeatButton>
+            <RepeatButton x:Name="down" x:FieldModifier="internal" Height="20" Width="20" Click="DownButtonClick">
+                <Image Source="pack://application:,,,/RDH2.Windows;component/Resources/Icons/DownArrow.png" />
+            </RepeatButton>
+        </StackPanel>
+        <RepeatButton x:Name="right" x:FieldModifier="internal" Height="20" Width="20" Click="RightButtonClick">
+            <Image Source="pack://application:,,,/RDH2.Windows;component/Resources/Icons/RightArrow.png" />
+        </RepeatButton>
+    </StackPanel>
+</UserControl>

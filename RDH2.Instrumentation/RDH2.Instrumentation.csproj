@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{17CD90F5-BB6A-4DC5-82E0-CAE7C5471508}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RDH2.Instrumentation</RootNamespace>
+    <AssemblyName>RDH2.Instrumentation</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MccDaq, Version=1.3.11.0, Culture=neutral, PublicKeyToken=a37eefcf5c6ca10a">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="NationalInstruments.Common, Version=9.1.20.159, Culture=neutral, PublicKeyToken=4544464cdeaab541, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="NationalInstruments.DAQmx, Version=9.4.20.50, Culture=neutral, PublicKeyToken=4544464cdeaab541, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\DaqInterface.cs" />
+    <Compile Include="Config\General.cs" />
+    <Compile Include="Config\HardwareConfigBase.cs" />
+    <Compile Include="Config\LockInAmp.cs" />
+    <Compile Include="Config\Monochromator.cs" />
+    <Compile Include="Config\Potentiostat.cs" />
+    <Compile Include="Config\SoftwareConfigBase.cs" />
+    <Compile Include="DAQ\DaqBase.cs" />
+    <Compile Include="DAQ\DaqFactory.cs" />
+    <Compile Include="DAQ\MCC.cs" />
+    <Compile Include="DAQ\NI.cs" />
+    <Compile Include="Enums\AcquisitionType.cs" />
+    <Compile Include="Enums\CurrentUnit.cs" />
+    <Compile Include="Enums\DaqType.cs" />
+    <Compile Include="Enums\IntegrationUnit.cs" />
+    <Compile Include="Enums\LockInType.cs" />
+    <Compile Include="Enums\SensitivityUnit.cs" />
+    <Compile Include="LockIn\Amplifier.cs" />
+    <Compile Include="LockIn\FrequencyDetector.cs" />
+    <Compile Include="LockIn\LowPass.cs" />
+    <Compile Include="LockIn\ReferenceGenerator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RDH2.Utilities\RDH2.Utilities.csproj">
+      <Project>{F0A9386D-DE94-48E7-8447-BBC7682F3771}</Project>
+      <Name>RDH2.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
